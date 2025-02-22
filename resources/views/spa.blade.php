@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
+    
 
     @livewireStyles
 </head>
@@ -30,7 +31,7 @@
 
     <div class="container mt-5">
         @if(auth()->check())
-            <h1>Welcome, {{ auth()->user()->name }}</h1>
+            @livewire('task-component')
         @else
             @livewire('auth-component')
         @endif

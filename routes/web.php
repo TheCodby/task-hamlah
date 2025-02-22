@@ -24,3 +24,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', function () {
     return view('spa');
 })->name('home');
+use App\Http\Livewire\TaskComponent;
+
+Route::get('/tasks', TaskComponent::class)->middleware('auth');
